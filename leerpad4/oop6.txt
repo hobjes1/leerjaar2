@@ -1,0 +1,69 @@
++-----------------------+
+|       IPlace          |
++-----------------------+
+| +Name: string         |
++-----------------------+
+
++-----------------------+
+|      Pokemon          |
++-----------------------+
+| -_name: string        |
+| -_strength: PokemonType |
+| -_weakness: PokemonType |
+| +Name: string         |
+| +Strength: PokemonType|
+| +Weakness: PokemonType|
++-----------------------+
+
++-----------------------+
+|      Pokeball         |
++-----------------------+
+| -_pokemon: Pokemon    |
+| +ContainedPokemon: Pokemon |
++-----------------------+
+
++-----------------------+
+|      Human            |
++-----------------------+
+| #Name: string         |
++-----------------------+
+
++-----------------------+
+|      Trainer          |
+|       (Human)         |
++-----------------------+
+| -_pokeballs: Pokemon[]|
+| -_currentPokeballCount: int |
+| +GetTrainerName(): string  |
+| +AddPokemon(pokemon: Pokemon): void|
++-----------------------+
+
++-----------------------+
+|       Nurse           |
+|       (Human)         |
++-----------------------+
+| -_healingStation: HealingStation |
+| +GetNurseName(): string |
+| +HealPokemonBelt(trainer: Trainer): void |
++-----------------------+
+
++-----------------------+
+|  HealingStation       |
++-----------------------+
+| +Heal(pokemons: Pokemon[]): void |
++-----------------------+
+
++-----------------------+
+|     PokemonCenter     |
++-----------------------+
+| -_nurse: Nurse        |
+| +Name: string         |
+| +Visit(trainer: Trainer): void |
++-----------------------+
+
++-----------------------+
+|     Arena             |
+|       (IPlace)        |
++-----------------------+
+| +Name: string         |
++-----------------------+
